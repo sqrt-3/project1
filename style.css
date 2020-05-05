@@ -1,21 +1,20 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-html{
+html {
     font-style: 62.5%;
     scroll-behavior: smooth;
 }
 
-body{
+body {
     font-family: 'Roboto', sans-serif;
     font-style: 1.6rem;
-    background-color: #333333;
 }
 
-.hero-shadow{
+.hero-shadow {
     position: absolute;
     top: 0;
     width: 100%;
@@ -24,7 +23,7 @@ body{
     z-index: -1;
 }
 
-.orange-color{
+.orange-color {
     color: rgb(255,102,0);
 }
 
@@ -62,4 +61,16 @@ header .btn {
 
 .header-text {
     font-size: 2.2rem;
+}
+
+/* ABOUT US */
+
+.about-boxes h3 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.about-icon {
+    font-size: 3rem;
 }
