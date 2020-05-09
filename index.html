@@ -13,8 +13,8 @@
     <script src="https://kit.fontawesome.com/42bce1f149.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light py-4 fixed-top">
+<body data-spy="scroll" data-target="#navbar-example">
+    <nav id="navbar-example" class="navbar navbar-expand-lg navbar-light bg-light py-4 fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#"><i class="fas fa-camera-retro orange-color mr-1"></i>MNX Studio</a>
             <button class="navbar-toggler border-0" type="button" data-toggle="collapse"
@@ -44,7 +44,7 @@
     </header>
 
     <main>
-        <section id="aboutus">
+        <section id="aboutus" class="scroll-fix">
             <div class="container py-5 about-boxes">
                 <div class="row text-center">
                     <div class="col-12 col-md-6 col-lg-3">
@@ -150,7 +150,7 @@
             </div>
         </section>
 
-        <section id="team">
+        <section id="team" class="scroll-fix">
             <div class="container text-center">
                 <p class="display-4 orange-color">Zespół</p>
                 <hr class="mt-4 mb-5 w-75 mx-auto">
@@ -220,7 +220,62 @@
                 </div>
             </div>
         </section>
+
+        <section id="contact" class="bg-dark text-light scroll-fix">
+            <div class="container text-center py-5">
+                <p class="display-4 mb-lg-5">Napisz do nas!</p>
+                <div class="row">
+
+                    <div class="my-5 m-lg-0 col-lg-3 contact-info order-lg-1">
+                        <h3>Adres:</h3>
+                        <p>MNX Studio</p>
+                        <p>ul. Długa 0</p>
+                        <p>00-000 Kraków</p>
+                        <hr class="w-50 w-lg-75 mx-auto bg-light">
+                        <p><i class="fas fa-mobile-alt"></i>+48 000 000 000</p>
+                        <p><i class="fas fa-phone"></i>+12 000 00 00</p>
+                    </div>
+
+                    <div class="col-lg-9">
+                        <form>
+
+                            <div class="input-group input-group-lg mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="fas fa-user"></i>
+                                    </span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Imię i nazwisko">
+                            </div>
+                            <div class="input-group input-group-lg mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="fas fa-at"></i>
+                                    </span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Adres email">
+                            </div>
+                            <div class="input-group input-group-lg mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="fas fa-comment-alt"></i>
+                                    </span>
+                                </div>
+                                <textarea rows="6" class="form-control" placeholder="Treść wiadomości"></textarea>
+                            </div>
+                            <input type="submit" value="Wyślij" class="btn btn-light px-4 py-2 submit-btn">
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <footer class="bg-dark text-light border-top">
+        <p class="text-center py-4 m-0">&copy; 2020 Copyright</p>
+
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -231,6 +286,17 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+
+    <script>
+        $(document).click(function (event) {
+            var clickover = $(event.target);
+            var _opened = $(".navbar-collapse").hasClass("show");
+            if (_opened === true && !clickover.hasClass("navbar-toggler")) {
+                $(".navbar-toggler").click();
+            }
+        });
+    </script>
+
 </body>
 
 </html>

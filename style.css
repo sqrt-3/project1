@@ -10,6 +10,7 @@ html {
 }
 
 body {
+    position: relative;
     font-family: 'Roboto', sans-serif;
     font-style: 1.6rem;
 }
@@ -25,6 +26,13 @@ body {
 
 .orange-color {
     color: rgb(255,102,0);
+}
+
+.scroll-fix::before {
+    display: block;
+    margin-top: -4rem;
+    height: 4rem;
+    content: '';
 }
 
 /* NAWIGACJA */
@@ -88,4 +96,27 @@ header .btn {
 #team .card-img-top{
     height: 300px;
     object-fit: cover;
+}
+
+/* KONTAKT */
+
+#contact h3{
+    margin-bottom: 1.5rem;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+}
+
+#contact .contact-info .fas{
+    margin-right: .5rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#contact .submit-btn{
+    font-size: 1.6rem;
+}
+
+#contact .input-group-lg>.custom-select, 
+#contact .input-group-lg>.form-control:not(textarea) {
+    height: calc(1.5em + 2rem + 2px);
 }
