@@ -42,7 +42,8 @@ body {
     margin-right: 0;
 }
 
-nav .navbar-nav, nav .fa-bars {
+nav .navbar-nav, 
+nav .fa-bars {
     font-size: 1.8rem;
     text-transform: uppercase;
 }
